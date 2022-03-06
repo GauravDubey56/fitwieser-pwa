@@ -50,7 +50,7 @@ export default function SplashScreen() {
               Fitwieser
             </Typography>
             <Typography variant="h5" align="center" color="text.secondary" paragraph>
-              Create, share, enjoy 
+              Organize, share and enjoy your workout sessions.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -58,8 +58,8 @@ export default function SplashScreen() {
               spacing={2}
               justifyContent="center"
             >
-              <Button href='/login' variant="contained" onClick={() => {onbutton('login')}}>Login</Button>
-              <Button href='/signup' variant="outlined" onClick={() => {onbutton('signup')}}>Signup</Button>
+              <Button variant="contained" onClick={() => {onbutton('login')}}>Login</Button>
+              <Button variant="outlined" onClick={() => {onbutton('signup')}}>Signup</Button>
             </Stack>
           </Container>
         </Box>
