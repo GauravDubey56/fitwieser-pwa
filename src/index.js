@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-
+import {SessionContextProvider} from './context/session-context'
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <SessionContextProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </SessionContextProvider>,
   document.getElementById('root')
 );
 
