@@ -5,22 +5,24 @@ const ExerciseContext = createContext({
      id:"",
      sets : '',
      rest: '',
+     preps: '',
      setName : (title) => {},
      setId : (id) => {},
      setRest : (rest) => {},
      setExercises : (exercises) => {}
 })
 
-export function SessionContextProvider(props) {
+export function ExerciseContextProvider(props) {
      const [name, setName] = useState('');
      const [id, setId] = useState('');
-     const [sets, setSets] = useState(0);
-     const [rest, setRest] = useState(0);
-
+     const [sets, setSets] = useState('');
+     const [rest, setRest] = useState('');
+     const [prep, setPrep] = useState('');
      function endExercise() {
           setName('');
           setSets('');
           setRest('');
+          setPrep('')
      }
 
      const context = {
@@ -28,9 +30,11 @@ export function SessionContextProvider(props) {
           id : id,
           rest : rest,
           sets : sets,
+          prep: prep,
           setName : setName,
           setRest : setRest,
           setSets : setSets,
+          setPrep: setPrep,
           setId : setId
      };
 
@@ -41,4 +45,4 @@ export function SessionContextProvider(props) {
      )
 }
 
-export default SessionContext;
+export default ExerciseContext;

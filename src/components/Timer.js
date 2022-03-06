@@ -9,9 +9,8 @@ const Timer = (props) => {
     const Ref = useRef(null);
   
     // The state for our timer
-    const [timer, setTimer] = useState('00:00:00');
-  
-  
+    const [timer, setTimer] =  useState(props.type === 'rest' ? props.time :'00:00:00');
+   
     const getTimeRemaining = (e) => {
         const total = Date.parse(e) - Date.parse(new Date());
         const seconds = Math.floor((total / 1000) % 60);

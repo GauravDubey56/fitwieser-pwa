@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import {useNavigate} from 'react-router-dom';
 
 function Copyright() {
   return (
@@ -22,6 +23,10 @@ function Copyright() {
 }
 const theme = createTheme();
 export default function SplashScreen() {
+  const navigate = useNavigate();
+  const onbutton = (route) => {
+    navigate(`../${route}`);
+  }
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -53,8 +58,8 @@ export default function SplashScreen() {
               spacing={2}
               justifyContent="center"
             >
-              <Button href='/login' variant="contained" >Login</Button>
-              <Button href='/signup' variant="outlined" >Signup</Button>
+              <Button href='/login' variant="contained" onClick={() => {onbutton('login')}}>Login</Button>
+              <Button href='/signup' variant="outlined" onClick={() => {onbutton('signup')}}>Signup</Button>
             </Stack>
           </Container>
         </Box>
