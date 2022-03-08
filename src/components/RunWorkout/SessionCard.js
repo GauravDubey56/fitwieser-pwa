@@ -1,7 +1,7 @@
 import React from 'react'
 import {useContext } from 'react';
 import SessionContext from '../../context/session-context'
-import {Paper, Typography} from '@mui/material'
+// import {Paper, Typography} from '@mui/material'
 function SessionCard() {
   const sessionCtx = useContext(SessionContext);
   console.log(sessionCtx);
