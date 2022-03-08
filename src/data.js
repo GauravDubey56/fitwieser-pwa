@@ -6,19 +6,25 @@ export const workouts = [
                {
                     exercise_name : 'squats',
                     sets : 5,
-                    rest : 20,
-                    prep : 10
+                    rest : 60,
+                    prep : 30
                },
                {
-                    exercise_name : 'pull ups',
+                    exercise_name : 'dips',
                     sets : 5,
-                    rest : 20,
-                    prep : 10
+                    rest : 60,
+                    prep : 30
+               },
+               {
+                    exercise_name: 'chinups',
+                    sets: 5,
+                    rest: 60,
+                    prep:30
                }
           ]
      },
      {
-          title : 'morning cardio',
+          title : ' cardio',
           id : 2,
           exercises : [
                {
@@ -29,7 +35,7 @@ export const workouts = [
                },
                {
                     exercise_name : 'skipping',
-                    sets : 5,
+                    sets : 10,
                     rest : 20,
                     prep : 10
                }
