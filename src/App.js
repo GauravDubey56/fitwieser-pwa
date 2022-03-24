@@ -1,13 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
-import Container from '@mui/material/Container'
-import SignIn from './Auth/SignIn'
-import SignUp from './Auth/SignUp'
-import SplashScreen from './screens/SplashScreen'
-import HomeScreen from './screens/HomeScreen';
-import Header from './components/Header'
-import WorkoutSession from './screens/WorkoutSession';
+import {Container} from '@mui/material'
+import {SignIn, SignUp } from './Auth'
+import {SplashScreen, HomeScreen, WorkoutSession, NewSession} from './screens'
+import {Header} from './components'
 function App() {
   return (
     <Router>
@@ -21,6 +18,7 @@ function App() {
             <Route path='/signup' element={<SignUp />} exact />
             <Route path='/home' element={<HomeScreen />} exact />
             <Route path='/workout' element={<WorkoutSession/>} exact />
+            <Route path='/new' element={<NewSession/>} exact/>
           </Routes>
         </Container>
       </main>

@@ -1,8 +1,6 @@
 import React from 'react'
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
+import {AppBar, Toolbar, Typography} from '@mui/material'
 function Header() {
   return (
      <AppBar position="relative">

@@ -1,9 +1,7 @@
 import React from 'react'
-import Timer from '../components/Timer'
-import SessionCard from '../components/RunWorkout/SessionCard'
-import CurrentCard from '../components/RunWorkout/CurrentCard'
+import {Timer, SessionCard, CurrentCard} from '../components'
 import {useContext, useState, useEffect } from 'react';
-import SessionContext from '../context/session-context'
+import {SessionContext} from '../context'
 function WorkoutSession() {
   const sessionCtx = useContext(SessionContext);
   const sessionFlow = [];
